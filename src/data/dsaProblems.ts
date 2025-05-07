@@ -18,7 +18,7 @@ export interface Problem {
 export const problems: Problem[] = [
   {
     id: '1',
-    title: 'Civil War - Optimal Team Selection',
+    title: 'Problem 2',
     description: `In this superhero epic, the denizens of the Marvel Universe are forced to pick sides when Captain America and Iron Man come to blows over ideological differences.
 The government decides to push for the Hero Registration Act, a law that limits a hero's actions. This results in a division in The Avengers. Iron Man stands with this Act, claiming that their actions must be kept in check otherwise cities will continue to be destroyed, but Captain America feels that saving the world is daring enough and that they cannot rely on the government to protect the world. And here the civil war begins.
 
@@ -94,7 +94,7 @@ Print the difference of the powers of teams`,
   },
   {
     id: 'seating-arrangement',
-    title: 'Seating Arrangement',
+    title: 'Problem 3',
     difficulty: 'medium',
     description: `You are a caretaker of a waiting room and you have to take care of empty seats such that all the people should sit together. Imagine the seats are in a straight line like in a movie theatre. People are seated on random seats initially. Your task is to make them sit together so that minimum number of people change their position. Also, they can be made to sit together in many ways. Find the number of ways you can make them sit together by requiring only minimal people movement.
 
@@ -159,7 +159,7 @@ Print minimum number of movements required and the number of ways in which all p
   },
   {
     id: 'two-sum',
-    title: 'Two Sum',
+    title: 'Problem 1',
     description: `Given an array of integers nums and an integer target, return indices of the two numbers in nums such that they add up to target.
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
