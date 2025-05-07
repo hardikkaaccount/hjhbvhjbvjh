@@ -3,6 +3,7 @@ import axios from 'axios';
 import { chatGPTService } from '../services/chatGPTService';
 import { toast } from 'sonner';
 import { useAuth } from './AuthContext';
+import { API_URL } from '@/services/api';
 
 interface AIAssistantContextType {
   promptHistory: Array<{ role: 'user' | 'assistant', content: string }>;
@@ -22,9 +23,6 @@ interface AIAssistantProviderProps {
 }
 
 const MAX_PROMPTS = 5;
-
-// API base URL
-const API_URL = 'http://localhost:5000/api';
 
 function getHistoryKey(userId: string, problemId: string) {
   return `promptWars_promptHistory_${userId}_${problemId}`;

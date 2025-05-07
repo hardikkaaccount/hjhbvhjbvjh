@@ -1,4 +1,5 @@
 import { TestCase } from "@/data/dsaProblems";
+import { API_URL } from './api';
 
 interface EvaluationResult {
   passed: boolean;
@@ -116,7 +117,7 @@ export async function saveSubmission(
 ) {
   try {
     // Send submission to API
-    const response = await fetch('http://localhost:5000/api/submissions', {
+    const response = await fetch(`${API_URL}/submissions`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -1,5 +1,6 @@
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 import axios from 'axios';
+import { API_URL } from '@/services/api';
 
 // Define user types
 export type UserRole = 'admin' | 'user';
@@ -25,7 +26,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 // Create axios instance with base URL
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api'
+  baseURL: API_URL
 });
 
 // Add token to requests if it exists

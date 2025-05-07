@@ -10,6 +10,7 @@ import { getProblemById } from "@/data/dsaProblems";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useAuth } from '@/contexts/AuthContext';
+import { API_URL } from '@/services/api';
 
 interface UserSubmission {
   _id: string;
@@ -30,9 +31,6 @@ interface User {
   tabSwitches: number;
   prompts_used: Map<string, number>;
 }
-
-// API base URL
-const API_URL = 'http://localhost:5000/api';
 
 const UserList = () => {
   const [users, setUsers] = useState<User[]>([]);

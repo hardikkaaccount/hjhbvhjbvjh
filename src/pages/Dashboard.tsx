@@ -11,6 +11,7 @@ import { fetchProblems, fetchProblemById } from '@/services/problemService';
 import { Button } from '@/components/ui/button';
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 import { useToast } from '@/components/ui/use-toast';
+import { API_URL } from '@/services/api';
 
 const Dashboard = () => {
   const { user, logout } = useAuth();
@@ -43,7 +44,7 @@ const Dashboard = () => {
           });
           // Send request to backend to increment tabSwitches
           if (user && user._id && user.token) {
-            fetch(`http://localhost:5000/api/users/${user._id}/tab-switch`, {
+            fetch(`${API_URL}/users/${user._id}/tab-switch`, {
               method: 'PUT',
               headers: {
                 'Content-Type': 'application/json',
