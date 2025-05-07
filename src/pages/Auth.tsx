@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import LoginForm from '@/components/auth/LoginForm';
-import RegisterForm from '@/components/auth/RegisterForm';
 import { useAuth } from '@/contexts/AuthContext';
 import { Navigate } from 'react-router-dom';
 
 const Auth = () => {
-  const [isLoginView, setIsLoginView] = useState(true);
   const { user, isLoading } = useAuth();
 
   if (isLoading) {
@@ -30,11 +28,7 @@ const Auth = () => {
           <p className="text-gray-600 mt-2">Your AI-powered DSA practice companion</p>
         </div>
         
-        {isLoginView ? (
-          <LoginForm onSwitchToRegister={() => setIsLoginView(false)} />
-        ) : (
-          <RegisterForm onSwitchToLogin={() => setIsLoginView(true)} />
-        )}
+        <LoginForm />
       </div>
     </div>
   );

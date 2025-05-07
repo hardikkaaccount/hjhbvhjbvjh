@@ -6,11 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from "@/components/ui/use-toast";
 
-interface LoginFormProps {
-  onSwitchToRegister: () => void;
-}
-
-const LoginForm = ({ onSwitchToRegister }: LoginFormProps) => {
+const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -48,7 +44,7 @@ const LoginForm = ({ onSwitchToRegister }: LoginFormProps) => {
       <CardHeader>
         <CardTitle className="text-2xl text-center">Login</CardTitle>
         <CardDescription className="text-center">
-          Sign in to your account to continue
+          Sign in with your provided credentials
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -58,7 +54,7 @@ const LoginForm = ({ onSwitchToRegister }: LoginFormProps) => {
             <Input
               id="email"
               type="email"
-              placeholder="you@example.com"
+              placeholder="warriorsXX@gmail.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -79,15 +75,8 @@ const LoginForm = ({ onSwitchToRegister }: LoginFormProps) => {
           <Button type="submit" className="w-full" disabled={isLoading}>
             {isLoading ? "Signing in..." : "Sign In"}
           </Button>
-          <div className="text-center text-sm">
-            Don't have an account?{" "}
-            <Button
-              variant="link"
-              className="p-0 h-auto font-normal"
-              onClick={onSwitchToRegister}
-            >
-              Register
-            </Button>
+          <div className="text-center text-sm mt-4">
+            <p className="text-gray-500">Use your assigned warrior credentials to login.</p>
           </div>
         </form>
       </CardContent>
